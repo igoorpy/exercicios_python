@@ -1,0 +1,1 @@
+# exercicios python com atual
