@@ -29,6 +29,20 @@ while True:
 
     print('Realizando sua conta confira o valor abaixo.')
 
-    break
+    if operadores == '+':
+        print(f'{num_1} + {num_2}', num_1 + num_2)
+    elif operadores == '-':
+        print(f'{num_1} + {num_2}', num_1 - num_2)
+    elif operadores == '*':
+        print(f'{num_1} + {num_2}', num_1 * num_2)
+    elif operadores == '/':
+        print(f'{num_1} + {num_2}', num_1 / num_2)
+    else:
+        print("Opção nao existe!")
+
+    sair = input('Quer sair? [s]im: ').lower().startswith('s')
+
+    if sair is True:
+        break
 
 
