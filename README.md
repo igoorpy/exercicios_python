@@ -1,1 +1,1 @@
-# exercicios python com atual
+# exercicios python
