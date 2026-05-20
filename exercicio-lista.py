@@ -10,7 +10,18 @@ while True:
         valor = input('Valor: ')
         lista.append(valor)
     elif opcao == 'a':   
-        print('a') 
+        indice_str = input('Escolha o indice para apagar: ')
+
+        try:
+            indice = int(indice_str)
+            del lista [indice]
+        except ValueError:
+            print('Digite um numero inteiro')
+        except IndexError:
+            print('Indice nao existe na lista')
+        except Exception:
+            print('Error')
+
     elif opcao == 'l':
         os.system('cls')
 
@@ -19,7 +30,5 @@ while True:
 
         for i, valor in enumerate(lista):
             print(i, valor)
-                           
-        print('l')
     else:
         print('Opção inválida')
