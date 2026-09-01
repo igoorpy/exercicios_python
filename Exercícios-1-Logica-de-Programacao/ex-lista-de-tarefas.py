@@ -1,12 +1,33 @@
-# 1. Crio uma lista vazia para guardar minhas tarefas
+# lista de tarefas vazia
 tarefas = []
 
-# 2. Pergunto uma tarefa para o usuário
-nova_tarefa = input("Digite uma tarefa para adicionar: ")
+# while para o programa continuar rodando atémandar parar
+while True:
+    print("\n--- SUA LISTA DE TAREFAS ---")
+    
+    # Mostra  as tarefas que estão na lista
+    print(tarefas)
+    
+    opcao = input("\nEscolha: (1) Adicionar, (2) Remover, (3) Sair: ")
 
-# 3. Coloco essa nova tarefa dentro da minha lista (append adiciona no final)
-tarefas.append(nova_tarefa)
+    if opcao == "1":
+        # Pego o texto e uso .append() para colocar no final da lista
+        item = input("Digite a nova tarefa: ")
+        tarefas.append(item)
+        print("Tarefa adicionada!")
 
-# 4. Mostro na tela como a lista ficou
-print("Minhas tarefas até agora:")
-print(tarefas)
+    elif opcao == "2":
+        # .remove() tirar um item da lista pelo nome
+        item = input("Digite o nome exato da tarefa para apagar: ")
+        if item in tarefas:
+            tarefas.remove(item)
+            print("Tarefa removida!")
+        else:
+            print("Essa tarefa não está na lista!")
+
+    elif opcao == "3":
+        print("Saindo do programa...")
+        break
+
+    else:
+        print("Opção inválida, tente de novo!")
